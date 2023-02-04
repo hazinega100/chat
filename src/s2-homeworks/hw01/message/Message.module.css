@@ -9,11 +9,12 @@
 
 .imageAndText img {
     width: 50px;
+    height: 50px;
 }
 
 .text {
     min-width: 10%;
-    height: 60px;
+    min-height: 60px;
     background: #0066CC;
     border-radius: 10px;
     padding: 8px 15px;
