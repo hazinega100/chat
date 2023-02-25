@@ -19,6 +19,7 @@ type SuperInputTextPropsType = Omit<DefaultInputPropsType, 'type'> & {
     onEnter?: () => void
     error?: ReactNode
     spanClassName?: string
+    onChangeError?: (value: string) => void
 }
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
@@ -60,7 +61,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 id={id}
                 type={'text'}
                 onChange={onChangeCallback}
-                onKeyPress={onKeyPressCallback}
+                onKeyDown={onKeyPressCallback}
                 className={finalInputClassName}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
