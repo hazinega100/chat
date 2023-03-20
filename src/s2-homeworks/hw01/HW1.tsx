@@ -42,7 +42,7 @@ export const friendMessage0: MessageType = {
     id: 100,
     user: {
         avatar: avatar, // можно менять
-        name: 'Anton', // можно менять
+        name: 'Gulbahor', // можно менять
     },
     message: {
         text: 'зеркальное сообщение для тренировки css', // можно менять
