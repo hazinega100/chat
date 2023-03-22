@@ -1,5 +1,11 @@
 .buttonsContainer {
+    margin: 24px 0 230px 0;
+}
+
+.buttonsContainer button {
+    margin-right: 20px;
 }
 
 .editableSpanContainer {
+    color: #0080FF;
 }
