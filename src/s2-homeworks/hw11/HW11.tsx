@@ -17,8 +17,12 @@ function HW11() {
 
     const change = (event: Event, value: number | number[]) => {
         // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
-        if (value === []) {
-
+        if (Array.isArray(value)) {
+            const [minValue, maxValue] = value
+            if (minValue <= maxValue) {
+                setValue1(minValue)
+                setValue2(maxValue)
+            }
         } else {
             setValue1(Number(value))
         }
@@ -45,7 +49,7 @@ function HW11() {
                             id={'hw11-double-slider'}
                             // сделать так чтоб value1/2 изменялось // пишет студент
                             onChange={change}
-                            value={value1}
+                            value={[value1, value2]}
                         />
                         <span id={'hw11-value-2'} className={s.number}>{value2}</span>
                     </div>
